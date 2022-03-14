@@ -12,7 +12,7 @@ A colaborative repository to study web automations with Selenium on Google Chrom
 
 3º - Extract the chromedriver.exe on your python folder. If you don't know where it is, open your python terminal, it will be written in the first line.
 
-### Then we need to pip install -U selenium on your python terminal and you are ready to play!
+### Then we need to pip install -U selenium on your python terminal and we are ready to play!
 
 
 
