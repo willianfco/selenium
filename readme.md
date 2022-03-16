@@ -14,7 +14,7 @@ A colaborative repository to study web automations with Selenium on Google Chrom
 
 ### Then we need to install selenium on your python terminal and we are ready to play!
 
- pip install -U selenium
+	pip install -U selenium
 
 
 
