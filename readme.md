@@ -8,11 +8,13 @@ A colaborative repository to study web automations with Selenium on Google Chrom
 
 1º - Open chrome://settings/help and get the version of your Google Chrome, this will indicate the version of ChromeDriver we will download on the next step.
 
-2º - Open [this link](https://chromedriver.chromium.org/downloads) and download the ChromeDriver version most similar to your Google Chrome version. There is no 64bits version    for windows, but 32bits works just fine.
+2º - Open [this link](https://chromedriver.chromium.org/downloads) and download the ChromeDriver version most similar to your Google Chrome version. If you are using windows, there is no 64bits version, but 32bits works just fine.
 
 3º - Extract the chromedriver.exe on your python folder. If you don't know where it is, open your python terminal, it will be written in the first line.
 
-### Then we need to pip install -U selenium on your python terminal and we are ready to play!
+### Then we need to install selenium on your python terminal and we are ready to play!
+
+ pip install -U selenium
 
 
 
