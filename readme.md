@@ -22,7 +22,8 @@ If you don't have it, install using:
 
 	~$ sudo apt-get install build-essential
 
-Then get the library requirements to your python virtual enviroment:
+Then install the library requirements on your python virtual enviroment:
 
 	~$ make requirements
  
+And you are ready to automate!
