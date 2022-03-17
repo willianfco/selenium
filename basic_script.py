@@ -1,4 +1,4 @@
-from selenium import webdriver # Control browser
+from selenium import webdriver # Control your browsers
 from selenium.webdriver.common.keys import Keys # Control Keyboard
 from selenium.webdriver.common.by import By # Locate itens on browser
 
