@@ -1,5 +1,5 @@
 # GLOBALS
-PYTHON = PYTHON3
+PYTHON = python3
 
 # COMMANDS
 
