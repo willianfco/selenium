@@ -7,6 +7,8 @@ options.add_argument('headless') # Invisible
 options.add_argument('disable-popup-blocking') # No pop up
 options.add_argument('incognito') # Incognito mode
 
-driver = webdriver.Chrome(options=options) # creates the browser driver
+driver = webdriver.Chrome(options=options) # creates the automated browser
+
+"""Insert your code in here"""
 
 driver.quit()
