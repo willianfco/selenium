@@ -2,6 +2,8 @@
 PYTHON = python3
 
 # COMMANDS
+install-pip-tools:
+	$(PYTHON) -m pip install pip-tools 
 
-requirements: 
-	$(PYTHON) -m pip install -r requirements.txt --use-deprecated=legacy-resolver
+requirements: install-pip-tools
+	$(PYTHON) -m pip install -r requirements.txt 
