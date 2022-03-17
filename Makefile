@@ -1,6 +1,6 @@
 # GLOBALS
 PROJECT_DIR := $(shell dirname $(realpath$(lastword $(MAKEFILE_LIST))))
-ṔYTHON_INTERPRETER = python
+PYTHON_INTERPRETER = python
 
 # TEST IF PYTHON IS INSTALLED
 
