@@ -12,10 +12,17 @@ A colaborative repository to study web automations with Selenium on Google Chrom
 
 3º - Extract the chromedriver.exe on your python folder. If you don't know where it is, open your python terminal, it will be written in the first line.
 
-### Then we need to install selenium on your python terminal and we are ready to play!
+### Then we need to install the requirements! 
 
-	pip install -U selenium
+Verify if you have GNU Make Installed:
 
+	~$ make --version
 
+If you don't have it, install using:
 
+	~$ sudo apt-get install build-essential
+
+Then get the library requirements to your python virtual enviroment:
+
+	~$ make requirements
  
