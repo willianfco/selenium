@@ -50,46 +50,18 @@ install-pip-tools: check_installed_python
 
 pip-compile: install-pip-tools
 	pip-compile --no-emit-index-url requirements.in
-	pip-compile --no-emit-index-url requirements-dev.in
 
 pip-downgrade:
 	$(PYTHON_INTERPRETER) -m pip install pip==21.3.1
 
 ## Install Python Dependencies & Install pre-commit hooks
 requirements: pip-downgrade pip-compile check_installed_python
-	$(PYTHON_INTERPRETER) -m pip install -r requirements-dev.txt --use-deprecated=legacy-resolver &&\
-	pre-commit install
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt --use-deprecated=legacy-resolver
 	pre-commit install --hook-type commit-msg
 
 ## Synchronize the Python Dependencies & Virtual Env
 sync-env: pip-compile
-	pip-sync requirements.txt requirements-dev.txt
-
-#################################################################################
-
-## (dvc) Execute the 'make_data' stage
-data:
-	@$(PYTHON_INTERPRETER) src/data/make_dataset.py
-
-## (dvc) Execute the 'prepare' stage
-prepare:
-	@$(PYTHON_INTERPRETER) src/prepare/prepare_data.py data/raw data/prepared models
-
-## (dvc) Execute the 'featurize' stage
-features:
-	@$(PYTHON_INTERPRETER) src/features/build_features.py data/prepared data/processed models
-
-## (dvc) Execute the 'train' stage
-train:
-	@$(PYTHON_INTERPRETER) src/models/train_model.py data/processed models
-
-## (dvc) Execute the 'evaluate' stage
-evaluation:
-	@$(PYTHON_INTERPRETER) src/models/evaluate_model.py data/processed models \
-	reports/scores.json reports/prc.json reports/roc.json reports/cfm.json
-
-#################################################################################
+	pip-sync requirements.txt
 
 ## Delete all compiled Python files
 clean:
